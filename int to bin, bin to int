@@ -1,0 +1,19 @@
+import math
+def binary_to_int(binary: str)-> int:
+    int_value = 0
+    for i in range(1):
+        while(binary != 0): 
+            remainder = binary % 10 #find remainder(extra ones)
+            int_value = int_value + remainder * pow(2, i) 
+            binary = binary//10 #integer divison, whole number
+            i += 1
+        return(int_value)
+
+    
+def int_to_bin(num: int) -> str:
+    bin_value = ""
+    while (num !=0): #integer cannot be 0
+        bin_value = str(num%2) + bin_value #remainder plus 
+        num = num //2 #integer division, whole number
+    return(bin_value)
+        
